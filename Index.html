@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - DummyJson</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="titulo-cafeteria-api">Listado de productos</h1>
+
+        <div class="search-container">
+            <input type="text" id="busqueda" placeholder="Buscar producto... (ej: phone, laptop, coffee, macbook, headphones)"
+                class="search-input">
+            <button id="btnBuscar" class="button_ver_prdcts">Buscar</button>
+            <button id="btnLimpiar" class="button-limpiar">Limpiar</button>  </div>
+        <div id="contenedor-productos"></div>
+
+        <div id="paginacion" class="paginacion">
+            <button id="btnAnterior" class="paginacion-btn anterior" onclick="cambiarPagina(-1)" disabled>Anterior</button>
+            <span id="infoPagina" class="paginacion-texto"></span>
+            <button id="btnSiguiente" class="paginacion-btn siguiente" onclick="cambiarPagina(1)">Siguiente</button>  
+        </div>
+        
+    </main>
+
+    <script src="productos.js"></script>
+</body>
+
+</html>
