@@ -1,26 +1,36 @@
-<!-- detalle.html (nueva página para detalles del producto) -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Producto - DummyJson</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Detalle de Quote - Animechan</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <main>
-        <h1 class="titulo-cafeteria-api">Detalles del Producto</h1>
+        <header>
+            <h1 id="titulo">Cargando quote...</h1>
+            <button onclick="window.history.back()" class="button-limpiar volver-btn">
+                ← Volver a la lista
+            </button>
+        </header>
 
-        <div id="contenedor-detalle" class="product-card-detalle"></div>
-        
-        <button class="button-regresar" onclick="window.location.href='index.html'">
-            Regresar a la Lista
-        </button>
+        <section class="detalle-section">
+            <!-- Imagen placeholder (la API no trae imágenes, así que usamos una genérica) -->
+            <img id="imagen" src="" alt="Representación de la quote" class="detalle-imagen">
+
+            <!-- Info básica: anime y personaje -->
+            <div id="info" class="detalle-info"></div>
+
+            <!-- Aquí se renderiza la quote completa y cualquier otro detalle -->
+            <div id="facts-container" class="detalle-contenido"></div>
+        </section>
     </main>
 
-    <script src="detalle.js"></script>
+    <!-- Script para la lógica de detalle -->
+    <script type="module" src="js/detalle.js"></script>
 </body>
 
 </html>

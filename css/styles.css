@@ -1,0 +1,284 @@
+
+/* Reset básico y general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos generales */
+.titulo-cafeteria-api {
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+/* Mensaje de info (delay de API) */
+.info-heroku {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin: 10px 0 30px;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    padding: 12px 16px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.button_ver_prdcts,
+.button-limpiar {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button_ver_prdcts {
+    background: #4a90e2;
+    color: white;
+}
+
+.button_ver_prdcts:hover {
+    background: #357abd;
+}
+
+.button-limpiar {
+    background: #e74c3c;
+    color: white;
+}
+
+.button-limpiar:hover {
+    background: #c0392b;
+}
+
+/* Controles de ordenamiento */
+.sort-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.category-select {
+    padding: 10px 16px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 180px;
+}
+
+/* Contenedor de quotes (tarjetas) */
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Tarjeta individual de quote */
+.producto-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-content {
+    padding: 20px;
+    text-align: center;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+.quote-author {
+    font-weight: bold;
+    color: #4a90e2;
+    margin: 8px 0;
+}
+
+.quote-anime {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.paginacion-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.paginacion-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.paginacion-btn.anterior {
+    background: #95a5a6;
+    color: white;
+}
+
+.paginacion-btn.siguiente {
+    background: #4a90e2;
+    color: white;
+}
+
+.paginacion-texto {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Página de detalles (detalles.html) */
+.detalle-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-imagen {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.detalle-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.15em;
+}
+
+.detalle-info p {
+    margin: 12px 0;
+}
+
+.detalle-contenido {
+    line-height: 1.7;
+    font-size: 1.15em;
+}
+
+.quote-detail {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 6px solid #4a90e2;
+    margin: 30px 0;
+}
+
+.quote-full {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin: 20px 0;
+    font-style: italic;
+    color: #2c3e50;
+}
+
+.volver-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    background: #7f8c8d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.volver-btn:hover {
+    background: #636e72;
+}
+
+/* Mensajes de loading y error */
+.loading,
+.error,
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.loading {
+    color: #4a90e2;
+    background: #e8f4ff;
+}
+
+.error {
+    color: #c0392b;
+    background: #ffebee;
+}
+
+.no-results {
+    color: #7f8c8d;
+    background: #f1f2f6;
+}

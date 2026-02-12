@@ -4,30 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - DummyJson</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Quotes de Anime - Animechan API</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <main>
-        <h1 class="titulo-cafeteria-api">Listado de productos</h1>
+        <h1 class="titulo-cafeteria-api">Quotes de Anime (Animechan)</h1>
+
+        <p class="info-heroku">
+            Nota: La primera carga puede tardar unos segundos (API en tier free).
+            Por defecto se cargan quotes de Overlord. ¡Busca tu anime favorito!
+        </p>
 
         <div class="search-container">
-            <input type="text" id="busqueda" placeholder="Buscar producto... (ej: phone, laptop, coffee, macbook, headphones)"
+            <input type="text" id="busqueda" placeholder="Buscar por anime o personaje... (ej: Overlord, Ainz, Albedo)"
                 class="search-input">
             <button id="btnBuscar" class="button_ver_prdcts">Buscar</button>
-            <button id="btnLimpiar" class="button-limpiar">Limpiar</button>  </div>
+            <button id="btnLimpiar" class="button-limpiar">Limpiar</button>
+        </div>
+
+        <div class="sort-container">
+            <select id="ordenCampo" class="category-select">
+                <option value="">Sin orden</option>
+                <option value="name">Por Anime</option>
+                <option value="id">Por Personaje</option>
+            </select>
+
+            <select id="ordenTipo" class="category-select">
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+
+            <button id="btnOrdenar" class="button_ver_prdcts">Aplicar Orden</button>
+        </div>
+
         <div id="contenedor-productos"></div>
 
         <div id="paginacion" class="paginacion">
-            <button id="btnAnterior" class="paginacion-btn anterior" onclick="cambiarPagina(-1)" disabled>Anterior</button>
+            <button id="btnAnterior" class="paginacion-btn anterior" disabled>Anterior</button>
             <span id="infoPagina" class="paginacion-texto"></span>
-            <button id="btnSiguiente" class="paginacion-btn siguiente" onclick="cambiarPagina(1)">Siguiente</button>  
+            <button id="btnSiguiente" class="paginacion-btn siguiente">Siguiente</button>
         </div>
-        
     </main>
 
-    <script src="productos.js"></script>
+    <!-- Script principal con imports (type="module") -->
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
